@@ -103,15 +103,17 @@
             display: flex;
             justify-content: center;
             overflow: hidden;
+            cursor: grab;
         }
 
         .restaurant-grid {
             display: flex;
             gap: 1rem;
-            overflow-x: hidden;
+            overflow-x: auto;
             flex-wrap: nowrap;
             justify-content: center;
             transition: transform 0.3s ease-in-out;
+            scroll-behavior: smooth;
         }
 
         .restaurant-card {
@@ -293,6 +295,18 @@
             border: 0;
         }
 
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .header {
@@ -354,7 +368,7 @@
             OpenGoyda
         </div>
         <div class="header-right">
-            <a href="#" class="sign-in">Sign in</a>
+            <a href="login.html" class="sign-in">Sign in</a>
             <i class="fas fa-search"></i>
         </div>
     </header>
@@ -438,7 +452,7 @@
         <div class="restaurant-grid" id="restaurantGrid">
             <!-- Existing Restaurants -->
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="VAIVAI" class="restaurant-image">
+                <img src="https://example.com/vaivai.jpg" alt="VAIVAI" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">VAIVAI Frankfurt am Main</div>
                     <div class="restaurant-rating">★★★★½ 821 reviews</div>
@@ -453,7 +467,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="KISU" class="restaurant-image">
+                <img src="https://example.com/kisu.jpg" alt="KISU" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">KISU Sushi Bar & Vietnamese</div>
                     <div class="restaurant-rating">★★★★½ 2 reviews</div>
@@ -466,7 +480,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Burbank" class="restaurant-image">
+                <img src="https://example.com/burbank.jpg" alt="Burbank" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Burbank Frankfurt</div>
                     <div class="restaurant-rating">★★★★½ 235 reviews</div>
@@ -481,7 +495,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Harvey's" class="restaurant-image">
+                <img src="https://example.com/harveys.jpg" alt="Harvey's" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Harvey's</div>
                     <div class="restaurant-rating">★★★★½ 232 reviews</div>
@@ -496,7 +510,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Pizza Hut" class="restaurant-image">
+                <img src="https://example.com/pizzahut.jpg" alt="Pizza Hut" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Pizza Hut</div>
                     <div class="restaurant-rating">★★★★☆ 150 reviews</div>
@@ -511,7 +525,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="McDonald's" class="restaurant-image">
+                <img src="https://example.com/mcdonalds.jpg" alt="McDonald's" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">McDonald's</div>
                     <div class="restaurant-rating">★★★☆☆ 300 reviews</div>
@@ -526,7 +540,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Burger King" class="restaurant-image">
+                <img src="https://example.com/burgerking.jpg" alt="Burger King" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Burger King</div>
                     <div class="restaurant-rating">★★★☆☆ 250 reviews</div>
@@ -541,7 +555,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Subway" class="restaurant-image">
+                <img src="https://example.com/subway.jpg" alt="Subway" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Subway</div>
                     <div class="restaurant-rating">★★★★☆ 180 reviews</div>
@@ -556,7 +570,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Starbucks" class="restaurant-image">
+                <img src="https://example.com/starbucks.jpg" alt="Starbucks" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Starbucks</div>
                     <div class="restaurant-rating">★★★★☆ 200 reviews</div>
@@ -571,7 +585,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="KFC" class="restaurant-image">
+                <img src="https://example.com/kfc.jpg" alt="KFC" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">KFC</div>
                     <div class="restaurant-rating">★★★☆☆ 120 reviews</div>
@@ -587,7 +601,7 @@
 
             <!-- Russian Restaurants -->
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Teremok" class="restaurant-image">
+                <img src="https://example.com/teremok.jpg" alt="Teremok" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Teremok</div>
                     <div class="restaurant-rating">★★★★☆ 450 reviews</div>
@@ -602,7 +616,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Varenichnaya №1" class="restaurant-image">
+                <img src="https://example.com/varenichnaya.jpg" alt="Varenichnaya №1" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Varenichnaya №1</div>
                     <div class="restaurant-rating">★★★★☆ 350 reviews</div>
@@ -617,7 +631,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Khachapuri" class="restaurant-image">
+                <img src="https://example.com/khachapuri.jpg" alt="Khachapuri" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Khachapuri</div>
                     <div class="restaurant-rating">★★★★☆ 300 reviews</div>
@@ -632,7 +646,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Lepim i Varim" class="restaurant-image">
+                <img src="https://example.com/lepimivarim.jpg" alt="Lepim i Varim" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Lepim i Varim</div>
                     <div class="restaurant-rating">★★★★☆ 250 reviews</div>
@@ -647,7 +661,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Mu-Mu" class="restaurant-image">
+                <img src="https://example.com/mumu.jpg" alt="Mu-Mu" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Mu-Mu</div>
                     <div class="restaurant-rating">★★★★☆ 200 reviews</div>
@@ -662,7 +676,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Yolki-Palki" class="restaurant-image">
+                <img src="https://example.com/yolkipalki.jpg" alt="Yolki-Palki" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Yolki-Palki</div>
                     <div class="restaurant-rating">★★★★☆ 150 reviews</div>
@@ -677,7 +691,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Grabli" class="restaurant-image">
+                <img src="https://example.com/grabli.jpg" alt="Grabli" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Grabli</div>
                     <div class="restaurant-rating">★★★★☆ 100 reviews</div>
@@ -692,7 +706,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Kroshka Kartoshka" class="restaurant-image">
+                <img src="https://example.com/kroshkakartoshka.jpg" alt="Kroshka Kartoshka" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Kroshka Kartoshka</div>
                     <div class="restaurant-rating">★★★★☆ 50 reviews</div>
@@ -707,7 +721,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Shokoladnitsa" class="restaurant-image">
+                <img src="https://example.com/shokoladnitsa.jpg" alt="Shokoladnitsa" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Shokoladnitsa</div>
                     <div class="restaurant-rating">★★★★☆ 30 reviews</div>
@@ -722,7 +736,7 @@
             </div>
 
             <div class="restaurant-card">
-                <img src="/api/placeholder/280/180" alt="Coffee House" class="restaurant-image">
+                <img src="https://example.com/coffeehouse.jpg" alt="Coffee House" class="restaurant-image">
                 <div class="restaurant-info">
                     <div class="restaurant-name">Coffee House</div>
                     <div class="restaurant-rating">★★★★☆ 20 reviews</div>
@@ -819,7 +833,11 @@
             slot.addEventListener('click', function() {
                 const restaurant = this.getAttribute('data-restaurant');
                 const time = this.getAttribute('data-time');
-                window.location.href = `booking.html?restaurant=${restaurant}&time=${time}`;
+                if (restaurant && time) {
+                    window.location.href = `booking.html?restaurant=${encodeURIComponent(restaurant)}&time=${encodeURIComponent(time)}`;
+                } else {
+                    showNotification('Выберите ресторан и время.');
+                }
             });
         });
 
@@ -868,6 +886,16 @@
             });
         }
 
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 3000);
+        }
+
         restaurantNameInput.addEventListener('input', filterRestaurants);
         datePicker.addEventListener('change', filterRestaurants);
         timePicker.addEventListener('change', filterRestaurants);
@@ -881,32 +909,44 @@
             });
         });
 
-        // Infinite scroll functionality
-        function cloneRestaurants() {
-            const clonedRestaurants = Array.from(restaurantGrid.querySelectorAll('.restaurant-card')).map(card => card.cloneNode(true));
-            clonedRestaurants.forEach(card => restaurantGrid.appendChild(card));
-        }
+        // Enable dragging to scroll the restaurant grid
+        let isDragging = false;
+        let startX, scrollLeft;
 
-        cloneRestaurants();
-        cloneRestaurants(); // Clone twice to ensure smooth infinite scroll
+        const startDragging = (e) => {
+            isDragging = true;
+            startX = e.pageX || e.touches[0].pageX;
+            scrollLeft = scrollContainer.scrollLeft;
+        };
 
-        let isScrolling;
-        scrollContainer.addEventListener('scroll', function() {
-            window.clearTimeout(isScrolling);
-            isScrolling = setTimeout(function() {
-                const scrollLeft = scrollContainer.scrollLeft;
-                const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        const stopDragging = () => {
+            isDragging = false;
+        };
 
-                if (scrollLeft < 1) {
-                    scrollContainer.scrollLeft = maxScrollLeft / 2;
-                } else if (scrollLeft > maxScrollLeft - 1) {
-                    scrollContainer.scrollLeft = maxScrollLeft / 2;
-                }
-            }, 66);
+        const dragging = (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX || e.touches[0].pageX;
+            const walk = (x - startX) * 1; // Adjust the scroll speed here
+            scrollContainer.scrollLeft = scrollLeft - walk;
+        };
+
+        scrollContainer.addEventListener('mousedown', startDragging);
+        scrollContainer.addEventListener('touchstart', startDragging);
+
+        scrollContainer.addEventListener('mouseup', stopDragging);
+        scrollContainer.addEventListener('touchend', stopDragging);
+
+        scrollContainer.addEventListener('mousemove', dragging);
+        scrollContainer.addEventListener('touchmove', dragging);
+
+        // Initialize the restaurant grid on page load
+        window.addEventListener('load', function() {
+            restaurantGrid.innerHTML = '';
+            restaurantData.forEach(restaurant => {
+                restaurantGrid.appendChild(restaurant.element);
+            });
         });
-
-        // Ensure the first restaurant is fully visible
-        scrollContainer.scrollLeft = 1;
     </script>
 </body>
 </html>
